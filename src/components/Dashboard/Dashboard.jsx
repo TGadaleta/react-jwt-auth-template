@@ -1,6 +1,11 @@
 // src/components/Dashboard.jsx
+import { useContext } from 'react'; // import useContext to grab the context
+import { AuthedUserContext } from '../../App'; // import the AuthedUserContext
 
-const Dashboard = ({ user }) => {
+
+const Dashboard = () => {
+  const user = useContext(AuthedUserContext);
+
     return (
       <main>
         <h1>Welcome, {user.username}</h1>
